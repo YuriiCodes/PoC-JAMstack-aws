@@ -10,6 +10,12 @@
       "StackName": "amplify-pocjamstackcontactus-staging-130943",
       "StackId": "arn:aws:cloudformation:us-east-1:401023310441:stack/amplify-pocjamstackcontactus-staging-130943/2e423a00-292e-11ed-9a98-0e8207f91803",
       "AmplifyAppId": "d2rst1pw99360b"
+    },
+    "categories": {
+      "auth": {
+        "pocjamstackcontactusc2161495": {},
+        "true": {}
+      }
     }
   }
 }

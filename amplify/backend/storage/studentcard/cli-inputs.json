@@ -1,0 +1,17 @@
+{
+  "resourceName": "studentcard",
+  "policyUUID": "0eb71c32",
+  "bucketName": "studentcard",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ",
+    "CREATE_AND_UPDATE"
+  ],
+  "authAccess": [
+    "READ",
+    "CREATE_AND_UPDATE",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

@@ -2,21 +2,27 @@ import React from 'react';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 // import {SavePost} from "../customApi";
+import { useState } from 'react';
+import { Storage } from 'aws-amplify';
 import { DataStore } from '@aws-amplify/datastore';
 import {Contact} from "../models";
-
 
 
 const phoneRegExp = "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$";
 
 export const ContactUsForm = () => {
+   const [ file, setFile ] = useState()
+
+   function handleChange(event) {
+    setFile(event.target.files[0])
+   }
+   
     const formik = useFormik({
         initialValues: {
             name: '',
             email: '',
             phone: '',
             message: '',
-            file: ''
         },
 
 
@@ -37,13 +43,16 @@ export const ContactUsForm = () => {
     return (
         <form className="mt-5" id="contact-form" onSubmit={async (e) => {
             e.preventDefault();
-            console.log(formik.values);
             try {
+                const result = await Storage.put(file.name, file, {
+                    contentType: file.type
+                })
+                console.log("RESULT CHECK", result)
                 await DataStore.save(
                     new Contact({
                         "name": formik.values.name,
                         "email": formik.values.email,
-                        "studentID": "",
+                        "studentID": file.name,
                         "message": formik.values.message,
                         "phone": formik.values.phone
                     })
@@ -125,11 +134,10 @@ export const ContactUsForm = () => {
                     you student price discount</label>
                 <input className="form-control"
                        type="file"
+                       accept="image/png, image/jpeg"
                        id="file"
                        name="file"
-                       onChange={formik.handleChange}
-                       onBlur={formik.handleBlur}
-                       value={formik.values.file}
+                       onChange={handleChange}
                 />
             </div>
 
