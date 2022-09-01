@@ -6,6 +6,8 @@ import {CardGroup} from "../components/CardGroup";
 import {ContactUsForm} from "../components/ContactUsForm";
 import {Footer} from "../components/Footer";
 import {HeadComponent} from "../components/HeadComponent";
+import {Map} from "../components/Map";
+import {Stepper} from "../components/Stepper";
 
 export default function Home() {
     return (
@@ -16,8 +18,8 @@ export default function Home() {
                 <ProductScreen />
                 <Features />
                 <CardGroup />
-                <br />
                 <ContactUsForm />
+                <Map />
             </main>
 
             <Footer />

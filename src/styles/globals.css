@@ -1,3 +1,13 @@
-.jumbotron{
+.jumbotron {
     height: 100vh;
 }
+
+.stepper .line {
+    width: 2px;
+    background-color: lightgrey !important;
+}
+
+.stepper .lead {
+    font-size: 1.1rem;
+}
+
