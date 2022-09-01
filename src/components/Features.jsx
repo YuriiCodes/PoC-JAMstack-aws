@@ -1,56 +1,15 @@
-export function Features (props) {
+import {Feature} from "./Feature";
+
+export function Features(props) {
     return (
-        <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
-            <div className="feature col">
-                <div
-                    className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg className="bi" width="1em" height="1em">
-                        <use xlinkHref="#collection"></use>
-                    </svg>
-                </div>
-                <h2>Featured title</h2>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
-                    and probably just keep going until we run out of words.</p>
-                <a href="src/components/Features#contact-form" className="icon-link d-inline-flex align-items-center">
-                    Call to action
-                    <svg className="bi" width="1em" height="1em">
-                        <use xlinkHref="#chevron-right"></use>
-                    </svg>
-                </a>
-            </div>
-            <div className="feature col">
-                <div
-                    className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg className="bi" width="1em" height="1em">
-                        <use xlinkHref="#people-circle"></use>
-                    </svg>
-                </div>
-                <h2>Featured title</h2>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
-                    and probably just keep going until we run out of words.</p>
-                <a href="src/components/Features#contact-form" className="icon-link d-inline-flex align-items-center">
-                    Call to action
-                    <svg className="bi" width="1em" height="1em">
-                        <use xlinkHref="#chevron-right"></use>
-                    </svg>
-                </a>
-            </div>
-            <div className="feature col">
-                <div
-                    className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg className="bi" width="1em" height="1em">
-                        <use xlinkHref="#toggles2"></use>
-                    </svg>
-                </div>
-                <h2>Featured title</h2>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
-                    and probably just keep going until we run out of words.</p>
-                <a href="src/components/Features#contact-form" className="icon-link d-inline-flex align-items-center">
-                    Call to action
-                    <svg className="bi" width="1em" height="1em">
-                        <use xlinkHref="#chevron-right"></use>
-                    </svg>
-                </a>
+        <div className="my-4  shadow-lg">
+
+            <h2 className="text-center mt-5 pt-5">Why us?</h2>
+
+            <div className="px-5 g-4 pb-5 row row-cols-1 row-cols-lg-3">
+                <Feature title="Student discounts" link="#contact-form" cta="Fill in studentID"/>
+                <Feature title="Friendly managers" link="#contact-form" cta="Give them a call"/>
+                <Feature title="The world's best brands" link="#contact-form" cta="Explore products"/>
             </div>
         </div>
     )

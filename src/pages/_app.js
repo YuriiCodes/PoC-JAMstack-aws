@@ -1,9 +1,8 @@
-// import '../styles/globals.css';
+import '../styles/globals.css';
 import {Amplify} from "aws-amplify";
 import config from '../aws-exports';
 import {AmplifyProvider} from "@aws-amplify/ui-react";
 import "bootstrap/dist/css/bootstrap.css";
-
 Amplify.configure(config)
 
 function MyApp({Component, pageProps}) {
