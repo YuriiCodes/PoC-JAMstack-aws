@@ -5,7 +5,7 @@ export function Map(props) {
             textAlign: 'right',
             height: '500px',
             width: '100%',
-        }}>
+        }} id="map">
             <h3 className="text-center mt-5 mb-3"> Where you can find us?</h3>
             <div className="gmap_canvas">
                 <iframe width="1080" height="500" id="gmap_canvas"

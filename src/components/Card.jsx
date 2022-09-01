@@ -7,9 +7,8 @@ export function Card(props) {
             }}/>
             <div className="card-body text-center">
                 <h5 className="card-title">{props.data.title || "Title"}</h5>
-                <p className="card-text">Alice is a freelance web designer and developer based in London. She is
-                    specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
-                <a href="#" className="btn btn-primary">{props.data.CTA || "Click me"}</a>
+                <p className="card-text">{props.data.about || ""}</p>
+                <a href="#" className="btn btn-outline-primary">{props.data.CTA || "Click me"}</a>
             </div>
         </div>
     )

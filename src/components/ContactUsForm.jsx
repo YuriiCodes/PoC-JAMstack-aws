@@ -147,7 +147,7 @@ export const ContactUsForm = () => {
                         />
                     </div>
 
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-lg btn-primary">Submit</button>
                 </form>
             </div>
 
