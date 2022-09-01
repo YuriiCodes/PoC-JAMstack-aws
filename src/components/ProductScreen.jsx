@@ -7,15 +7,6 @@ export function ProductScreen(props) {
 
             className={"shadow-lg content position-relative overflow-hidden mt-3 text-center bg-light d-flex justify-content-center  align-items-center jumbotron"
             }
-            // style={{
-            //     display: 'block',
-            //     backgroundImage: `url(${BG_URL})`,
-            //     backgroundPosition: 'center',
-            //     backgroundSize: 'cover',
-            //     // filter: 'blur(5px)',
-            //     backdropFilter: 'blur(5px)',
-            //     backgroundRepeat: 'no-repeat'
-            // }}
         >
             <div style={{
                 display: 'block',
