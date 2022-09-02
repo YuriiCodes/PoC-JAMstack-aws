@@ -98,7 +98,7 @@ export const ContactUsForm = () => {
                         {formik.touched.email && formik.errors.email ? (
                             <div>{formik.errors.email}</div>
                         ) : null}
-                        <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone
+                        <small id="emailHelp" className="form-text text-muted">We&apos;ll never share your email with anyone
                             else.</small>
                     </div>
 

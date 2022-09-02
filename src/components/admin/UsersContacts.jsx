@@ -43,7 +43,7 @@ export function UsersContacts(props) {
                 <button onClick={props.signOut} type="button" className="btn btn-secondary" style={{width: '150px'}}> Log out</button>
             </div>
             <div className="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 mb-5">
-                {userData ? userData.map(data => <ContactBlock data={data}/>): <p>Loading</p> }
+                {userData ? userData.map(data => <ContactBlock key={data.id} data={data}/>): <p>Loading</p> }
             </div>
         </div>
 
