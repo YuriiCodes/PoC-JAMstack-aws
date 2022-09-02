@@ -1,13 +1,19 @@
 import {useEffect, useState} from "react";
-import {DataStore} from '@aws-amplify/datastore';
 import {Storage} from 'aws-amplify'
-import {Contact} from "../../models";
 import {ContactBlock} from './ContactBlock';
+
+import { DataStore } from '@aws-amplify/datastore';
+import {Contact} from "../../models";
+
+
+// We use Client Side Rendering on admin tab even though we are building on top of Next.js to be able to fetch data
+// on every page update. That is slower, but admin functionality requires it.
 
 export function UsersContacts(props) {
     const [userData, setUserData] = useState("");
     useEffect(() => {
         async function fetchContacts() {
+
             const models = await DataStore.query(Contact);
             const modelsWithImages = []
             for (const model of models) {
@@ -34,7 +40,7 @@ export function UsersContacts(props) {
         <div className="my-5">
             <div style={{width: '600px', margin: 'auto', display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                 <h1>Messages from clients</h1>
-                <button onClick={props.signOut} type="button" class="btn btn-secondary" style={{width: '150px'}}> Log out</button>
+                <button onClick={props.signOut} type="button" className="btn btn-secondary" style={{width: '150px'}}> Log out</button>
             </div>
             <div className="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 mb-5">
                 {userData ? userData.map(data => <ContactBlock data={data}/>): <p>Loading</p> }

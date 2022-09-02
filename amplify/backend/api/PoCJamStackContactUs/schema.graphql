@@ -1,4 +1,4 @@
-type Contact @model @auth(rules: [{allow: groups, groups: ["admin"], operations: [read, create]}, {allow: public, operations: [create]}]) {
+type Contact @model @auth(rules: [{allow: groups, groups: ["admin"], operations: [read, create]}, {allow: public, operations: [create, read]}]) {
   id: ID!
   name: String!
   email: AWSEmail!
