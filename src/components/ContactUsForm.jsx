@@ -65,7 +65,7 @@ export const ContactUsForm = () => {
                     } catch (err) {
                         alert(err);
                     }
-                    alert("submitted blyat");
+                    alert("submitted!");
                 }}>
                     <div className="form-group mb-4">
                         <label htmlFor="name">Name</label>
