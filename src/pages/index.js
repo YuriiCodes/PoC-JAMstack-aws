@@ -11,18 +11,12 @@ import {Stepper} from "../components/Stepper";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
-            <HeadComponent />
-            <main className={styles.main + "container"}>
-                <Navbar />
-                <ProductScreen />
-                <Features />
-                <CardGroup />
-                <ContactUsForm />
-                <Map />
-            </main>
-
-            <Footer />
-        </div>
+        <>
+            <ProductScreen/>
+            <Features/>
+            <CardGroup/>
+            <ContactUsForm/>
+            <Map/>
+        </>
     )
 }

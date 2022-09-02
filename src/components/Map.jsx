@@ -16,8 +16,6 @@ export function Map(props) {
                     height: '500px',
                     width: '100%',
                 }}></iframe>
-                <br/>
-                <a href="https://www.embedgooglemap.net">embed google maps html</a>
             </div>
         </div>
     )

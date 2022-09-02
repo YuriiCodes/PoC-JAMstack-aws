@@ -7,6 +7,7 @@ import {Amplify} from 'aws-amplify';
 import {withAuthenticator} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from "../aws-exports";
+
 Amplify.configure(awsExports);
 
 import {Auth} from 'aws-amplify';
@@ -22,20 +23,14 @@ async function signOut() {
 
 function Home() {
     return (
-        <div className={styles.container}>
-            <HeadComponent/>
-            <main className={styles.main + "container"}>
-                <Navbar/>
-
-                <div style={{
-                    marginTop: '10vh',
-                }}>
-                    <UsersContacts signOut={signOut}/>
-                </div>
-            </main>
-
-            <Footer/>
-        </div>
+        <>
+            <div style={{
+                marginTop: '10vh',
+                height: '90vh',
+            }}>
+                <UsersContacts signOut={signOut}/>
+            </div>
+        </>
     )
 }
 
