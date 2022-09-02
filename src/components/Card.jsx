@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Card(props) {
     return (
         <div className="card p-5 bg-white">
@@ -8,7 +10,9 @@ export function Card(props) {
             <div className="card-body text-center">
                 <h5 className="card-title">{props.data.title || "Title"}</h5>
                 <p className="card-text">{props.data.about || ""}</p>
-                <a href="#" className="btn btn-outline-primary">{props.data.CTA || "Click me"}</a>
+                <Link  href="/#contact-form">
+                    <a className="btn btn-outline-primary">{props.data.CTA || "Click me"}</a>
+                </Link>
             </div>
         </div>
     )
