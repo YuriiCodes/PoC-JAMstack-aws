@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-const BG_URL = "https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1287&dpr=2";
-
+const BG_URL = "/bg-main.jpg";
 export function ProductScreen(props) {
     return (
         <div
