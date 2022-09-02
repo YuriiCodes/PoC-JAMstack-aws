@@ -65,7 +65,7 @@ export const ContactUsForm = () => {
                     } catch (err) {
                         alert(err);
                     }
-                    alert("submitted!");
+                    alert("Submitted! We will contact you as soon as possible.");
                 }}>
                     <div className="form-group mb-4">
                         <label htmlFor="name">Name</label>
