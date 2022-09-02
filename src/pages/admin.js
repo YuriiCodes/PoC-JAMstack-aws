@@ -1,8 +1,3 @@
-import styles from '../styles/Home.module.css'
-import {Navbar} from "../components/Navbar";
-import {Footer} from "../components/Footer";
-import {HeadComponent} from "../components/HeadComponent";
-
 import {Amplify} from 'aws-amplify';
 import {withAuthenticator} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
