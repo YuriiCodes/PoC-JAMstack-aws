@@ -30,9 +30,7 @@ function Home() {
                 <div style={{
                     marginTop: '10vh',
                 }}>
-                    <h1>Admin</h1>
-                    <button onClick={signOut}> Log out</button>
-                    <UsersContacts />
+                    <UsersContacts signOut={signOut}/>
                 </div>
             </main>
 
