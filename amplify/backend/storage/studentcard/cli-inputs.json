@@ -4,7 +4,6 @@
   "bucketName": "studentcard",
   "storageAccess": "authAndGuest",
   "guestAccess": [
-    "READ",
     "CREATE_AND_UPDATE"
   ],
   "authAccess": [

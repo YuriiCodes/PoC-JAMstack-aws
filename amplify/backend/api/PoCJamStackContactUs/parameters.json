@@ -1,5 +1,12 @@
 {
   "AppSyncApiName": "PoCJamStackContactUs",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authpocjamstackcontactusc2161495",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-09-01T17:04:45.670Z"
 }
