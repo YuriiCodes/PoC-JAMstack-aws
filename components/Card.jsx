@@ -10,7 +10,7 @@ export function Card(props) {
             <div className="card-body text-center">
                 <h5 className="card-title">{props.data.title || "Title"}</h5>
                 <p className="card-text">{props.data.about || ""}</p>
-                <Link  href="/#contact-form">
+                <Link  href="/pages#contact-form">
                     <a className="btn btn-outline-primary">{props.data.CTA || "Click me"}</a>
                 </Link>
             </div>

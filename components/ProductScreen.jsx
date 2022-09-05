@@ -22,7 +22,7 @@ export function ProductScreen(props) {
             <div className="col-md-5 p-lg-5 mx-auto my-5">
                 <h1 className="display-4 fw-normal">Welcome to LaptLand👋</h1>
                 <p className="lead fw-normal">You won`&apos;t resist buying from us. Our prices are simply stunning.</p>
-                <Link href="/#brands">
+                <Link href="/pages#brands">
                     <a className="btn btn-outline-secondary">Explore
                         available brands
                     </a>
